@@ -1,0 +1,21 @@
+<div class="w-100">
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar>
+        <mat-icon>account_circle</mat-icon>
+      </div>
+      <mat-card-title>{{estateItem.propertyName}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="src/assets/download.jpeg" alt="Image">
+    <mat-card-content>
+      <h3>Email: {{estateItem.contact.email}}, tel: {{estateItem.contact.tel}}</h3>
+      <p>{{estateItem.description}}</p>
+      <span>{{estateItem.location}}</span>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Cancel</button>
+      <button mat-button>Request info</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>

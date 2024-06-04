@@ -1,0 +1,92 @@
+[
+  {
+    "propertyName": "House One",
+    "location": "Italy",
+    "img": "",
+    "description": "This is a long description",
+    "contact": {
+      "email": "sample@email.com",
+      "tel": "000-111-222"
+    }
+  }, 
+{
+    "propertyName": "House Two",
+    "location": "France",
+    "img": "",
+    "description": "This is a long description",
+    "contact": {
+      "email": "sample@email.com",
+      "tel": "000-111-222"
+    }
+  }, 
+{
+    "propertyName": "House Three",
+    "location": "Germany",
+    "img": "",
+    "description": "This is a long description",
+    "contact": {
+      "email": "sample@email.com",
+      "tel": "000-111-222"
+    }
+  }, 
+{
+    "propertyName": "House Four",
+    "location": "Germany",
+    "img": "",
+    "description": "This is a long description",
+    "contact": {
+      "email": "sample@email.com",
+      "tel": "000-111-222"
+    }
+  }, 
+{
+    "propertyName": "House Five",
+    "location": "Italy",
+    "img": "",
+    "description": "This is a long description",
+    "contact": {
+      "email": "sample@email.com",
+      "tel": "000-111-222"
+    }
+  }, 
+{
+    "propertyName": "House Six",
+    "location": "France",
+    "img": "",
+    "description": "This is a long description",
+    "contact": {
+      "email": "sample@email.com",
+      "tel": "000-111-222"
+    }
+  }, 
+{
+    "propertyName": "House Seven",
+    "location": "Switzerland",
+    "img": "",
+    "description": "This is a long description",
+    "contact": {
+      "email": "sample@email.com",
+      "tel": "000-111-222"
+    }
+  }, 
+{
+    "propertyName": "House Height",
+    "location": "Italy",
+    "img": "",
+    "description": "This is a long description",
+    "contact": {
+      "email": "sample@email.com",
+      "tel": "000-111-222"
+    }
+  },
+{
+    "propertyName": "House Nine",
+    "location": "France",
+    "img": "",
+    "description": "This is a long description",
+    "contact": {
+      "email": "sample@email.com",
+      "tel": "000-111-222"
+    }
+  }
+]

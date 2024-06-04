@@ -1,0 +1,6 @@
+<section> 
+  <app-searchbar></app-searchbar>
+  <ng-container class="grid-container" *ngFor="let house of houses">
+    <app-card [estateItem]="house"></app-card>
+  </ng-container>
+</section>
