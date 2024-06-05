@@ -1,0 +1,82 @@
+// custom-theme.scss
+@use '../../node_modules//@angular/material/index' as mat;
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@include mat.core();
+
+// Define custom blue palette
+$primary: (
+  50: #E3F2FD,
+  100: #BBDEFB,
+  200: #90CAF9,
+  300: #64B5F6,
+  400: #42A5F5,
+  500: #2196F3,
+  600: #1E88E5,
+  700: #1976D2,
+  800: #1565C0,
+  900: #0D47A1,
+  A100: #82B1FF,
+  A200: #448AFF,
+  A400: #2979FF,
+  A700: #2962FF,
+  contrast:(50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff,
+  )
+);
+// Define custom gray palette
+$accent: (
+  50: #FAFAFA,
+  100: #F5F5F5,
+  200: #EEEEEE,
+  300: #E0E0E0,
+  400: #BDBDBD,
+  500: #9E9E9E,
+  600: #757575,
+  700: #616161,
+  800: #424242,
+  900: #212121,
+  A100: #D5D5D5,
+  A200: #AAAAAA,
+  A400: #303030,
+  A700: #616161,
+  contrast:(50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff,
+  )
+);
+
+$primary : mat.define-palette($primary, 900);
+$accent : mat.define-palette($accent, 900);
+
+// Define the custom theme using the custom palettes
+$custom-theme: mat.define-light-theme((color: (primary: $primary,
+        accent: $accent,
+      ),
+      typography: (font-family: 'Helvetica Neue',
+        font-weight: 900),
+      density: (scale: -1)));
+
+@include mat.all-component-themes($custom-theme);

@@ -1,4 +1,5 @@
 export interface EstateItem {
+  id: string;
   propertyName: string;
   location: string;
   img: string;

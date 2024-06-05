@@ -28,3 +28,43 @@ body {
   max-width: 90%;
   padding-top: 2rem;
 }
+
+.d-flex{
+  display: flex;
+}
+
+.-block{
+  display: block;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.justify-content-between{
+  justify-content: space-between;
+}
+
+.col{
+  flex-direction: column;
+}
+
+.row{
+  flex-direction: row;
+}
+
+.pt-1{
+  padding-top: 1rem;
+}
+
+.pb-1{
+  padding-bottom: 1rem;
+}
+
+.pr-2{
+  padding-right: 2rem;
+}
+
+.pl-2{
+  padding-left: 2rem;
+}

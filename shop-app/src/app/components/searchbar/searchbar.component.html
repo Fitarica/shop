@@ -1,6 +1,8 @@
-<form [formGroup]="formGroup">
-  <mat-form-field>
-    <input matInput type="text" formControlName="inputSearch" (input)="onChange()">
-    <mat-icon matSuffix>search</mat-icon>
-  </mat-form-field>
-</form>
+  
+  <form [formGroup]="searchForm">
+    <mat-form-field>
+      <mat-label>Search by name or location </mat-label>
+      <input matInput type="text" formControlName="searchText">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </form>

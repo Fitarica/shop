@@ -2,8 +2,8 @@
   display: flex;
   flex-wrap: wrap;
 }
-
-.app-card {
-  width: calc(33.33% - 20px); /* Adjust the width as needed */
-  margin: 10px;
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 1.5rem;
 }
