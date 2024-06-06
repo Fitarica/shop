@@ -1,0 +1,13 @@
+@mixin largeScreens {
+  @media screen and (min-width: 13in) {
+    .container {
+      width: 90%;
+      margin: 0 auto;
+    }
+    body {
+      font-size: 18px;
+    }
+  }
+}
+
+@include largeScreens;

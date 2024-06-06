@@ -3,7 +3,7 @@
     "id": "id_01",
     "propertyName": "House One",
     "location": "Italy",
-    "img": "./download.jpeg",
+    "img": "../../../assets/download.jpeg",
     "description": "This is a long description",
     "contact": {
       "email": "sample@email.com",
@@ -14,7 +14,7 @@
     "id": "id_02",
     "propertyName": "House Two",
     "location": "France",
-    "img": "./download.jpeg",
+    "img": "../../../assets/download.jpeg",
     "description": "This is a long description",
     "contact": {
       "email": "sample@email.com",
@@ -24,7 +24,7 @@
 {   "id": "id_03",
     "propertyName": "House Three",
     "location": "Germany",
-    "img": "./download.jpeg",
+    "img": "../../../assets/download.jpeg",
     "description": "This is a long description",
     "contact": {
       "email": "sample@email.com",
@@ -35,7 +35,7 @@
     "id": "id_04",
     "propertyName": "House Four",
     "location": "Germany",
-    "img": "./download.jpeg",
+    "img": "../../../assets/download.jpeg",
     "description": "This is a long description",
     "contact": {
       "email": "sample@email.com",
@@ -46,7 +46,7 @@
     "id":"id_05",
     "propertyName": "House Five",
     "location": "Italy",
-    "img": "./download.jpeg",
+    "img": "../../../assets/download.jpeg",
     "description": "This is a long description",
     "contact": {
       "email": "sample@email.com",
@@ -57,7 +57,7 @@
     "id": "id_06",
     "propertyName": "House Six",
     "location": "France",
-    "img": "./download.jpeg",
+    "img": "../../../assets/download.jpeg",
     "description": "This is a long description",
     "contact": {
       "email": "sample@email.com",
@@ -67,7 +67,7 @@
 {   "id": "id_07",
     "propertyName": "House Seven",
     "location": "Switzerland",
-    "img": "./download.jpeg",
+    "img": "../../../assets/download.jpeg",
     "description": "This is a long description",
     "contact": {
       "email": "sample@email.com",
@@ -78,7 +78,7 @@
     "id": "id_08",
     "propertyName": "House Height",
     "location": "Italy",
-    "img": "./download.jpeg",
+    "img": "../../../assets/download.jpeg",
     "description": "This is a long description",
     "contact": {
       "email": "sample@email.com",
@@ -89,7 +89,7 @@
     "id": "id_09",
     "propertyName": "House Nine",
     "location": "France",
-    "img": "./download.jpeg",
+    "img": "../../../assets/download.jpeg",
     "description": "This is a long description",
     "contact": {
       "email": "sample@email.com",

@@ -7,7 +7,7 @@ import { Subscription, debounceTime, distinctUntilChanged } from 'rxjs';
   templateUrl: './searchbar.component.html',
   styleUrls: ['./searchbar.component.scss']
 })
-export class SearchbarComponent implements OnInit, OnDestroy{
+export class SearchbarComponent implements OnInit, OnDestroy {
   @Output() searchTextChanged = new EventEmitter<string>();
   searchForm: FormGroup;
 
@@ -20,16 +20,17 @@ export class SearchbarComponent implements OnInit, OnDestroy{
       searchText: ['']
     });
   }
+
   ngOnInit(): void {
-    const inputCtrl = this.searchForm.get('searchText'); 
-    if(!inputCtrl?.value) return; 
+    const inputCtrl = this.searchForm.get('searchText');
+    if (!inputCtrl) return;
 
     this.sub$.push(inputCtrl.valueChanges.pipe(
       debounceTime(500),
       distinctUntilChanged()
     ).subscribe(text => {
       this.searchTextChanged.emit(text);
-    }))
+    }));
   }
 
   ngOnDestroy(): void {
