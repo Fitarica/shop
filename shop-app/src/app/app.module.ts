@@ -14,8 +14,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field'; 
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { HttpClientModule } from '@angular/common/http';
 import { PhoneIntlPrexixPipe } from './pipes/phone-intl-prexix.pipe';
+import { DatePickerDialogComponent } from './components/date-picker-dialog/date-picker-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,7 @@ import { PhoneIntlPrexixPipe } from './pipes/phone-intl-prexix.pipe';
     HeaderComponent,
     SearchbarComponent,
     CardComponent,
-    PhoneIntlPrexixPipe
+    PhoneIntlPrexixPipe,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +41,10 @@ import { PhoneIntlPrexixPipe } from './pipes/phone-intl-prexix.pipe';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule, 
+    MatDialogModule, 
+    DatePickerDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
