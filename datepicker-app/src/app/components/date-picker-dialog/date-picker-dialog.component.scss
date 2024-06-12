@@ -1,0 +1,8 @@
+::ng-deep .mat-calendar-body-cell.highlight-date{
+  background-color: #f3b2b2;
+  border-radius: 4rem;
+}
+
+::ng-deep span.mat-calendar-body-selected.mat-focus-indicator {
+  background-color: #cec8c8;
+}

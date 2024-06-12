@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './core/dashboard/dashboard.component';
-import { HeaderComponent } from './core/header/header.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { CardComponent } from './components/card/card.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -20,12 +18,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { PhoneIntlPrexixPipe } from './pipes/phone-intl-prexix.pipe';
 import { DatePickerDialogComponent } from './components/date-picker-dialog/date-picker-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { PublicHolidaysService } from './service/holiday-service/holiday.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
-    HeaderComponent,
     SearchbarComponent,
     CardComponent,
     PhoneIntlPrexixPipe,
@@ -44,7 +41,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatDatepickerModule,
     MatNativeDateModule, 
     MatDialogModule, 
-    DatePickerDialogComponent
+    DatePickerDialogComponent, 
   ],
   providers: [],
   bootstrap: [AppComponent]

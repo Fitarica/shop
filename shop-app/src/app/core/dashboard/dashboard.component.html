@@ -1,8 +1,0 @@
-<section> 
-  <app-searchbar (searchTextChanged)="onSearchTextChanged($event)"></app-searchbar>
-  <div class="card-grid">
-    <ng-container class="grid-container" *ngFor="let house of filteredHouses">
-      <app-card [estateItem]="house" class="grid-item d-flex"></app-card>
-    </ng-container>
-  </div>
-</section>
