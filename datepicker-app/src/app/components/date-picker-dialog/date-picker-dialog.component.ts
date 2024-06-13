@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
-import { MatCalendarCellClassFunction, MatDatepickerModule } from '@angular/material/datepicker';
+import { MatCalendarCellClassFunction, MatDatepicker, MatDatepickerInputEvent, MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { Subscription } from 'rxjs';
 import { PublicHolidaysService } from 'src/app/service/holiday-service/holiday.service';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 export interface DialogData {
   title: string
@@ -25,29 +27,39 @@ export interface DialogData {
     MatInputModule,
     MatNativeDateModule,
     MatTooltipModule,
+    OverlayModule,
   ],
   providers: [],
 })
 
-export class DatePickerDialogComponent implements OnInit, AfterViewInit {
-  //@ViewChildren('datepicker') datepickerElements!: QueryList<any>;
+export class DatePickerDialogComponent implements OnInit, OnDestroy {
+  @ViewChild('datepicker', { static: true, read: ElementRef }) datepicker!: MatDatepicker<Date>;
+
 
   public dateControl!: FormControl;
   public publicHolidays!: any;
   public holidays!: Date[];
-  public endDate!: Date;
+  public selectedDate!: Date;
+  private sub$: Subscription[] = []
 
   constructor(
     private fb: FormBuilder,
     private publicHolidaysService: PublicHolidaysService
   ) {
   }
+  
   ngOnInit(): void {
     this.getPublicHolidays();
     this.dateControl = this.fb.control(new Date());
+    this.dateControl.valueChanges.subscribe((value)=> {
+      console.log(value)
+      this.selectedDate = value; 
+    })
+
   }
 
-  ngAfterViewInit(): void {
+  ngOnDestroy(): void {
+    this.sub$.forEach(s => s.unsubscribe());
   }
 
   public dateFilter: (date: Date | null) => boolean =
@@ -75,14 +87,15 @@ export class DatePickerDialogComponent implements OnInit, AfterViewInit {
     if (isPublicHoliday) {
       return 'Public Holiday';
     }
-  
+
     return '';
   };
 
   private getPublicHolidays(): void {
     const year = new Date().getFullYear();
 
-    this.publicHolidaysService.getPublicHolidays(year, 'DE')
+    this.sub$.push(
+      this.publicHolidaysService.getPublicHolidays(year, 'DE')
       .subscribe({
         next: (data => {
           this.publicHolidays = data;
@@ -90,7 +103,7 @@ export class DatePickerDialogComponent implements OnInit, AfterViewInit {
         }), error: (error) => {
           console.error(error);
         }
-      });
+      }))
   }
 
   private isPublicHoliday(date: Date): boolean {
@@ -99,8 +112,8 @@ export class DatePickerDialogComponent implements OnInit, AfterViewInit {
 
   private isSameDay(date1: Date, date2: Date): boolean {
     return date1.getDate() === date2.getDate() &&
-           date1.getMonth() === date2.getMonth() &&
-           date1.getFullYear() === date2.getFullYear();
+      date1.getMonth() === date2.getMonth() &&
+      date1.getFullYear() === date2.getFullYear();
   }
 
   private extractDates(): Date[] {

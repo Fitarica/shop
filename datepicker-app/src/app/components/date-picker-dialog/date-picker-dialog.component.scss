@@ -1,8 +1,50 @@
-::ng-deep .mat-calendar-body-cell.highlight-date{
-  background-color: #f3b2b2;
-  border-radius: 4rem;
-}
+::ng-deep {
 
-::ng-deep span.mat-calendar-body-selected.mat-focus-indicator {
-  background-color: #cec8c8;
+  .mat-calendar-body-disabled {
+    .mat-calendar-body-cell-content &:hover {
+      background-color: lightgray !important;
+    }
+  }
+
+  .mat-calendar-body-cell.highlight-date {
+    background-color: #f3b2b2;
+    border-radius: 3rem;
+
+    &:hover {
+      &::after {
+        content: 'Holiday';
+        position: absolute;
+        font-size: 0.5rem;
+        background-color: dimgray;
+        color: white;
+        border-radius: 0.2rem;
+        z-index: 2;
+      }
+    }
+  }
+
+  .mat-calendar-body-cell-content {
+    &.mat-calendar-body-disabled {
+      background-color: transparent !important;
+
+      &:hover {
+        background-color: transparent !important;
+      }
+    }
+
+    &.mat-focus-indicator {
+      &:hover {
+        background-color: #8a8584 !important;
+      }
+    }
+
+    &.mat-calendar-body-selected {
+      background-color: #cec8c8;
+
+      &:hover {
+        background-color: #8b8786 !important;
+      }
+    }
+  }
+
 }
