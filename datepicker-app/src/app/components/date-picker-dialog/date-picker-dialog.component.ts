@@ -9,7 +9,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { Subscription, debounceTime, distinctUntilChanged } from 'rxjs';
 import { PublicHolidaysService } from 'src/app/service/holiday-service/holiday.service';
 import { OverlayModule } from '@angular/cdk/overlay';
-import * as moment from 'moment';
 import { CustomDateAdapter } from 'src/app/directives/date-adapter';
 
 export interface DialogData {
